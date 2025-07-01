@@ -1,14 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import Layout from '@/components/organisms/Layout'
-import Home from '@/components/pages/Home'
-import Products from '@/components/pages/Products'
-import ProductDetail from '@/components/pages/ProductDetail'
-import Capabilities from '@/components/pages/Capabilities'
-import Quality from '@/components/pages/Quality'
-import About from '@/components/pages/About'
-import Contact from '@/components/pages/Contact'
+import React from "react";
+import { Route, Router, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import Products from "@/components/pages/Products";
+import ProductDetail from "@/components/pages/ProductDetail";
+import Home from "@/components/pages/Home";
+import Layout from "@/components/organisms/Layout";
 
 function App() {
   return (
@@ -19,13 +15,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/capabilities" element={<Capabilities />} />
-            <Route path="/quality" element={<Quality />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>
-        
         <ToastContainer
           position="top-right"
           autoClose={3000}
@@ -40,7 +31,7 @@ function App() {
         />
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
